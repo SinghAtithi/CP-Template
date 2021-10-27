@@ -1,0 +1,12 @@
+void dfs(int n){
+    vis[n]=true;
+    for(auto x:graph[n]){
+        if(!vis[x])dfs(x);
+    }
+}
+
+void dfs(int n, int par){
+    for(auto x:graph[n]){
+        if(x!=par)dfs(x,n);
+    }
+}
